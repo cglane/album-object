@@ -41,7 +41,18 @@ var albumPage = {
     });
     $('section .albumDiv img').on('click',function(event){
         $($(this)).css({"display": "block", "width": "69%","margin":"auto"});
-        $($(this)).siblings().css({"display":"none", "width": "50"});
+        $($(this)).siblings().css({"display":"none", "width": "69%"});
+    });
+    $('section .albumDiv img').on('dblclick',function(event){
+        var parent = $(this).parent();
+        var $next = $($(this)).next();
+        if($next.length){
+          $($(this)).css({"display":"none"});
+          $next.css({"display":"block"});
+        }
+        else{
+            parent.first().css({"display":"block"});
+        }
     });
   },
   loadAlbums: function(){
@@ -67,9 +78,12 @@ loadImages:function(item,div){
     var tpl= _.template(templates.photoImages);
     photo = el;
     $(div).append(tpl(photo));
-    console.log(photo);
   });
-}
+},
+loadTemplates:function(name,itr){
+    var tpl = _.template(templates[name]);
+    return tpl(itr);
+},
 
 
 
