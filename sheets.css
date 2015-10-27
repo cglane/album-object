@@ -1,0 +1,41 @@
+body, .wrapper {
+  width: 100%;
+  margin: 0; }
+
+aside {
+  position: absolute;
+  width: 20%;
+  vertical-align: top;
+  margin-top: 70px; }
+
+aside button {
+  width: 80%;
+  margin-bottom: 20px;
+  color: blue;
+  display: none; }
+
+section {
+  width: 60%;
+  margin: auto; }
+
+section h1 {
+  width: 50%;
+  font-size: 3em;
+  margin: auto;
+  margin-bottom: 70px; }
+
+section .albumDiv {
+  width: 30%;
+  display: inline-block;
+  font-size: 3em;
+  border: 1px solid black; }
+
+section img {
+  width: 20%;
+  display: none; }
+
+.displayNone {
+  display: none; }
+
+.displayBlock {
+  display: block; }
